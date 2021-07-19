@@ -1,0 +1,33 @@
+version: '3.2'
+
+services:
+  esg:
+    container_name: emailgateway
+    image: iwayvietnam/emailgateway:latest
+    hostname: esg.iwaytest2.com  
+    restart: always
+    environment:
+      - DOMAIN=iwaytest2.com
+      - HOSTNAME=esg.iwaytest2.com
+      - POLICYDPASS=123456a
+      - MAILSCANNERPASS=123456aA
+      - MAILWATCHPASS=123456
+      - ZIMBRA_HOST=20.0.0.3
+    ports:
+      - "25:25"
+      - "7790:7790"
+      - "90:90"
+    volumes:
+      - "./databases:/var/lib/mysql"
+      - "./config/mailscanner:/etc/MailScanner"
+      - "./config/postfix:/etc/postfix"
+      - "./logs:/var/log/"
+    networks:
+        esg:
+          ipv4_address: 20.0.0.4
+networks:
+  esg:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 20.0.0.0/24
