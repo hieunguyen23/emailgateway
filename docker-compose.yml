@@ -6,6 +6,9 @@ services:
     image: iwayvietnam/emailgateway:latest
     hostname: esg.iwaytest2.com  
     restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
     environment:
       - DOMAIN=iwaytest2.com
       - HOSTNAME=esg.iwaytest2.com
