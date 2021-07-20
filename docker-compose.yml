@@ -2,9 +2,9 @@ version: '3.2'
 
 services:
   emailgateway:
-    container_name: emailgateway
-    image: hieunv23/emailgateway
-    hostname: eg.iwaytest2.com  
+    container_name: emailsecuritygateway
+    image: hieunguyen23/emailsecuritygateway
+    hostname: esg.iwaytest2.com  
     restart: always
     environment:
       - DOMAIN=iwaytest2.com
