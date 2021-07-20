@@ -40,7 +40,7 @@ $ docker build --rm -t hieunv23/emailgateway .
 ```bash
 * $ git clone https://github.com/hieunguyen23/emailgateway.git && cd emailgateway
 ```
-##### Run docker-compose
+##### Edit variable MAILBACKEND_HOST then run docker-compose
 ```bash
 $ docker-compose up -d
 ```
