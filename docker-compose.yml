@@ -1,7 +1,7 @@
 version: '3.2'
 
 services:
-  esg:
+  emailgateway:
     container_name: emailgateway
     image: hieunv23/emailgateway
     hostname: eg.iwaytest2.com  
@@ -23,10 +23,10 @@ services:
       - "./config/postfix:/etc/postfix"
       - "./logs:/var/log/"
     networks:
-        esg:
+        emailgateway:
           ipv4_address: 20.0.0.4
 networks:
-  esg:
+  emailgateway:
     driver: bridge
     ipam:
      config:
