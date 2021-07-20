@@ -3,16 +3,16 @@ version: '3.2'
 services:
   esg:
     container_name: emailgateway
-    image: iwayvietnam/emailgateway:latest
-    hostname: esg.iwaytest2.com  
+    image: hieunv23/emailgateway
+    hostname: eg.iwaytest2.com  
     restart: always
     environment:
       - DOMAIN=iwaytest2.com
       - HOSTNAME=esg.iwaytest2.com
-      - POLICYDPASS=123456a
-      - MAILSCANNERPASS=123456aA
-      - MAILWATCHPASS=123456
-      - ZIMBRA_HOST=20.0.0.3
+      - POLICYDPASS=Policydpass123
+      - MAILSCANNERPASS=Mailscannerpass123
+      - MAILWATCHPASS=Mailwatchpass123
+      - ZIMBRA_HOST=x.x.x.x
     ports:
       - "25:25"
       - "7790:7790"
