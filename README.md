@@ -15,7 +15,7 @@ $ docker run --name email-gateway --hostname eg.iwaytest2.com -d -it \
 -e POLICYDPASS=Policydpass123 -e MAILSCANNERPASS=Mailscannerpass123 \
 -e MAILWATCHPASS=Mailwatchpass123 -e MAILBACKEND_HOST=x.x.x.x hieunv23/emailgateway
 ```
-(and WAIT... 40-45 minutes)
+(and WAIT... 35-40 minutes)
 
 ### How to build a new Docker image
 ##### Firstly, of course, install Docker and setup to manage Docker as a non-root user
@@ -52,4 +52,4 @@ $ docker-compose status
 ```bash
 $ docker-compose logs -f
 ```
-(and WAIT... 40-45 minutes)
+(and WAIT... 35-40 minutes)
