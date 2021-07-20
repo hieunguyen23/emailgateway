@@ -12,7 +12,7 @@ services:
       - POLICYDPASS=Policydpass123
       - MAILSCANNERPASS=Mailscannerpass123
       - MAILWATCHPASS=Mailwatchpass123
-      - ZIMBRA_HOST=x.x.x.x
+      - MAILBACKEND_HOST=x.x.x.x
     ports:
       - "25:25"
       - "7790:7790"
