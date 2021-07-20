@@ -1,1 +1,1 @@
-domain.com smtp:zimbra_host:25
+domain.com smtp:MAILBACKEND_HOST:25
