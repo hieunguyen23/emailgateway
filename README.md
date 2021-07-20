@@ -11,9 +11,9 @@ $ docker run --name email-gateway --hostname eg.iwaytest2.com -d -it \
 -v /opt/emailgateway/config/mailscanner:/etc/MailScanner \
 -v /opt/emailgateway/config/postfix:/etc/postfix \
 -v /opt/emailgateway/logs:/var/log/ \
--e DOMAIN=iwaytest2.com -e HOSTNAME=esg.iwaytest2.com \
--e POLICYDPASS=policydpass -e MAILSCANNERPASS=mailscannerpass \
--e MAILWATCHPASS=mailwatchpass -e MAILBACKEND_HOST=[IP_BACKEND_MAIL] hieunv23/emailgateway
+-e DOMAIN=iwaytest2.com -e HOSTNAME=eg.iwaytest2.com \
+-e POLICYDPASS=Policydpass123 -e MAILSCANNERPASS=Mailscannerpass123 \
+-e MAILWATCHPASS=Mailwatchpass123 -e MAILBACKEND_HOST=x.x.x.x hieunv23/emailgateway
 ```
 (and WAIT... 40-45 minutes)
 
