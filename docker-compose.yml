@@ -8,7 +8,7 @@ services:
     restart: always
     environment:
       - DOMAIN=iwaytest2.com
-      - HOSTNAME=eg.iwaytest2.com
+      - HOSTNAME=esg.iwaytest2.com
       - POLICYDPASS=Policydpass123
       - MAILSCANNERPASS=Mailscannerpass123
       - MAILWATCHPASS=Mailwatchpass123
