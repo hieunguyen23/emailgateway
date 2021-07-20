@@ -3,7 +3,7 @@ The project to build a Email Gateway (MailScanner & MailWatch) Docker image base
 Check out the prebuilt image on Docker Hub: https://hub.docker.com/r/hieunv23/emailgateway
 
 ### How to start a new Email Gateway container from prebuilt Docker image
-
+Change MAILBACKEND_HOST to IP mail backend
 ```bash
 $ docker run --name email-gateway --hostname eg.iwaytest2.com -d -it \
 -p 25:25/tcp -p 90:90/tcp -p 7790:7790/tcp \
