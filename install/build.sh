@@ -99,7 +99,7 @@ chmod 644 /etc/postfix/{body_checks,local_domains,postscreen_access.cidr,sender_
 cat /opt/template/postfix/config/header_checks >> /etc/postfix/header_checks
 cat /opt/template/postfix/config/transport >> /etc/postfix/transport
 grep -RiIlr 'domain.com' /etc/postfix/ | xargs sed -i 's/domain.com/'$DOMAIN'/g'
-sed -i "s|zimbra_host|$ZIMBRA_HOST|" /etc/postfix/transport
+sed -i "s|MAILBACKEND_HOST|$MAILBACKEND_HOST|" /etc/postfix/transport
 
 postmap  /etc/postfix/local_domains
 postmap  /etc/postfix/body_checks
