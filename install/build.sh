@@ -284,7 +284,7 @@ echo "start clamd"
 echo "start cbpolicyd"
 /usr/bin/perl /usr/sbin/cbpolicyd --config /etc/policyd/cluebringer.conf
 
-echo "Installed successfully. You can access now to MailWatch http://$HOSTNAME"
+echo "Installed successfully. You can access now to MailWatch http://$HOSTNAME:90"
 
 fi 
 
