@@ -172,7 +172,7 @@ mkdir /etc/MailScanner/bayes
 chown root:nginx /etc/MailScanner/bayes
 chmod g+rws /etc/MailScanner/bayes
 /bin/bash /opt/template/bayes/bayes_db.sh
-sa-learn --restore /opt/template/bayes/bayes-import
+sa-learn --restore /opt/template/bayes/bayes.txt
 sa-update
 sa-learn --sync
 chown postfix:mtagroup /etc/MailScanner/bayes/bayes_*
