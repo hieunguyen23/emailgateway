@@ -17,4 +17,39 @@ $ docker run --name email-gateway --hostname eg.iwaytest2.com -d -it \
 ```
 (and WAIT... 40-45 minutes)
 
+### How to build a new Docker image
+##### Firstly, of course, install Docker and setup to manage Docker as a non-root user
+See: https://docs.docker.com/engine/install/
 
+##### Pull the latest Rocky Linux based docker image
+```bash
+$ docker pull rockylinux/rockylinux
+```
+##### Checkout this git repo
+```bash
+* $ git clone https://github.com/hieunguyen23/emailgateway.git && cd emailgateway
+```
+
+##### Build Zimbra a new docker image
+```bash
+$ docker build --rm -t hieunv23/emailgateway .
+```
+
+### How to start with Docker compose
+##### Require : Install docker-compose for your server
+```bash
+* $ git clone https://github.com/hieunguyen23/emailgateway.git && cd emailgateway
+```
+##### Run docker-compose
+```bash
+$ docker-compose up -d
+```
+##### Command check status
+```bash
+$ docker-compose status
+```
+##### Command check logs
+```bash
+$ docker-compose logs -f
+```
+(and WAIT... 40-45 minutes)
